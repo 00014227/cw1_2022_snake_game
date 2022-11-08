@@ -6,11 +6,10 @@
 # with increasing difficulty, more snakes on screen, snakes with changing colours. Use your creativity!
 #
 # The code examples should be pushed to a private git repository.
-import turtle
 
 import pygame
 import random
-import time
+
 pygame.init()
 
 white = (255, 255, 255)
@@ -25,7 +24,7 @@ dis_height = 400
 
 
 dis = pygame.display.set_mode((dis_width, dis_height))
-pygame.display.set_caption('Snake Game 00014227')
+pygame.display.set_caption('Snake Game 00014227 ')
 
 clock = pygame.time.Clock()
 
