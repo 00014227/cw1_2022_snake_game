@@ -41,7 +41,9 @@ score_font = pygame.font.SysFont("comicsansms", 35)
 def Your_score(score):
     value = score_font.render("Your Score: " + str(score), True, yellow)
     dis.blit(value, [0, 0])
-
+def User2_score(score):
+    value = score_font.render("Your Score: " + str(score), True, yellow)
+    dis.blit(value, [300, 0])
 
 def our_snake(snake_block, snake_list):
     for x in snake_list:
@@ -50,7 +52,7 @@ def our_snake(snake_block, snake_list):
 
 def our_snake2 (snake_block2, snake_list2):
     for x in snake_list2:
-        pygame.draw.rect(dis, red, [x[0], x[1], snake_block2, snake_block2])
+        pygame.draw.rect(dis, black, [x[0], x[1], snake_block2, snake_block2])
 
 
 
@@ -92,7 +94,7 @@ def gameLoop():
             dis.fill(blue)
             message("You Lost! Press C-Play Again or Q-Quit", red)
             Your_score(Length_of_snake - 1)
-
+            User2_score(Length_of_snake2 - 1)
             pygame.display.update()
 
             for event in pygame.event.get():
@@ -168,6 +170,7 @@ def gameLoop():
 
         our_snake2(snake_block2, snake_List2)
         Your_score(Length_of_snake - 1)
+        User2_score(Length_of_snake2 - 1)
 
         pygame.display.update()
 
